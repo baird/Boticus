@@ -23,14 +23,6 @@ void setup()
 // MAIN LOOP
 void loop()
 {
-  lightLevel = analogRead(sensorPin);
-
-  manualTune();
-
-  analogWrite(ledPin, lightLevel);
-
-/*
-  
   // Wakeup Tones
 
   int i, duration;
@@ -53,12 +45,13 @@ void loop()
 
   // We only want to play the song once, so we'll pause forever:
   while (true) {}
-  // If you'd like your song to play over and over,
-  // remove the above statement
 
+  lightLevel = analogRead(sensorPin);
+
+  manualTune();
+
+  analogWrite(ledPin, lightLevel);
 }
-
-*/
 
 // VOID MANUAL PHOTOSENSOR TUNING
 void manualTune()
