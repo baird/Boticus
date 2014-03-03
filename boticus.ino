@@ -7,10 +7,10 @@ const int songLength = 19;
 int isAwake = 0;
 
 //char notes[] = "cdfda ag cdfdg gf "; // a space represents a rest
-char notes[] = "eeee dddd eeee dddd"; // a space represents a rest
+char notes[] = "cdfda ag cdfdg gf "; // a space represents a rest
 
 //int beats[] = {1,1,1,1,1,1,4,4,2,1,1,1,1,1,1,4,4,2};
-int beats[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+int beats[] = {1,1,1,1,1,1,4,4,2,1,1,1,1,1,1,4,4,2};
 
 int tempo = 150;
 
