@@ -44,7 +44,7 @@ void loop()
   }
 
   // We only want to play the song once, so we'll pause forever:
-  while (true) {}
+ // while (true) {}
 
   lightLevel = analogRead(sensorPin);
 
