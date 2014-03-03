@@ -1,5 +1,10 @@
 const int sensorPin = 0;
 const int ledPin = 9;
+
+const in redPin = 3;
+const in greenPin = 5;
+const in bluePin = 6;
+
 int lightLevel, high = 0, low = 1023;
 
 const int buzzerPin = 13;
@@ -59,6 +64,19 @@ if (isAwake <= 0) {
   analogWrite(ledPin, lightLevel);
   
   isAwake = 1;
+  
+  // led fade
+  
+  for(value = 0 ; value <= 255; value+=5) // fade in (from min to max) 
+  { 
+    analogWrite(redPin, value);           
+    delay(30);                            
+  } 
+  for(value = 255; value >=0; value-=5)   
+  { 
+    analogWrite(redPin, value); 
+    delay(30); 
+  }  
 }
 
 // VOID MANUAL PHOTOSENSOR TUNING
