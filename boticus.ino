@@ -4,6 +4,7 @@ int lightLevel, high = 0, low = 1023;
 
 const int buzzerPin = 13;
 const int songLength = 19;
+int isAwake = 0;
 
 //char notes[] = "cdfda ag cdfdg gf "; // a space represents a rest
 char notes[] = "eeee dddd eeee dddd"; // a space represents a rest
@@ -23,7 +24,10 @@ void setup()
 // MAIN LOOP
 void loop()
 {
-  // Wakeup Tones
+
+if (isAwake <= 0) {
+
+  // Wakeup Tone
 
   int i, duration;
 
@@ -44,13 +48,17 @@ void loop()
   }
 
   // We only want to play the song once, so we'll pause forever:
- // while (true) {}
+  // while (true) {}
+  
+ }
 
   lightLevel = analogRead(sensorPin);
 
   manualTune();
 
   analogWrite(ledPin, lightLevel);
+  
+  isAwake = 1;
 }
 
 // VOID MANUAL PHOTOSENSOR TUNING
