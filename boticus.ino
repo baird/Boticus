@@ -29,7 +29,9 @@ void loop()
 
   analogWrite(ledPin, lightLevel);
 
-  // MUSIC SHIT
+/*
+  
+  // Wakeup Tones
 
   int i, duration;
 
@@ -56,7 +58,7 @@ void loop()
 
 }
 
-
+*/
 
 // VOID MANUAL PHOTOSENSOR TUNING
 void manualTune()
